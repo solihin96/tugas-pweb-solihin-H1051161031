@@ -1,0 +1,249 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Belajar CSS</title>
+  <style>
+.container {
+  display: grid;
+  grid-template-columns: 0.25fr 15px 0.75fr;
+  grid-template-rows: auto 25px auto 25px auto 25px auto;
+ 
+ max-width: 500px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+ label{
+  display:block;
+  margin-bottom: 10px;
+}
+ label > span{
+  float: center;
+  width: 100px;
+  color: #F072A9;
+  font-weight: bold;
+  font-size: 13px;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+ 
+.grid {
+  background-color: #444;
+  color: #fff;
+  padding: 25px;
+  font-size: 1rem;
+
+
+  max-width: 500px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+ label{
+  display:block;
+  margin-bottom: 10px;
+
+}
+ label > span{
+  float: center;
+  width: 100px;
+  color: #F072A9;
+  font-weight: bold;
+  font-size: 13px;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+   max-width: 500px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+ label{
+  display:block;
+  margin-bottom: 10px;
+}
+ label > span{
+  float: center;
+  width: 100px;
+  color: #F072A9;
+  font-weight: bold;
+  font-size: 13px;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.sidebar {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 6;
+  background: #a0c263;
+
+   max-width: 500px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+ label{
+  display:block;
+  margin-bottom: 10px;
+}
+ label > span{
+  float: center;
+  width: 100px;
+  color: #F072A9;
+  font-weight: bold;
+  font-size: 13px;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.content {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background: #f5c531;
+  height:100%;
+
+   max-width: 500px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+ label{
+  display:block;
+  margin-bottom: 10px;
+}
+ label > span{
+  float: center;
+  width: 100px;
+  color: #F072A9;
+  font-weight: bold;
+  font-size: 13px;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.footer {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 7;
+  grid-row-end: 8;
+  background: #FFA500;
+
+   max-width: 500px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+ label{
+  display:block;
+  margin-bottom: 10px;
+}
+ label > span{
+  float: center;
+  width: 10px;
+  color: #F072A9;
+  font-weight: bold;
+  font-size: 13px;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+ </style>
+ <script type="text/javascript">
+function sukma(){
+var nama= document.input.inama.value;
+document.output.onama.value=nama;
+var password= document.input.pass.value;
+document.output.password.value=password;
+if(document.input.ijekal[0].checked==true){
+document.output.ojekal.value="laki -laki";
+}
+else{
+document.output.ojekal.value="Perempuan";
+}
+
+var alamat= document.input.ialamat.value;
+document.output.oalamat.value=alamat;
+
+var bayar= document.input.ibayar.value;
+document.output.bayar.value=bayar;
+
+}
+</script>
+
+ </head>
+<body>
+ <div class="container">
+  <div class="grid header">Header</div>
+  <div class="grid sidebar"><a href="index.html">HOME</a>
+<a href="produk.html">PRODUK</a>
+<a href="artikel.html">ARTIKEL</a>
+<a href="member.html">MEMBER</a>
+<a href="testimoni.html">TESTIMONIAL</a>
+<a href="kontak.html">KONTAK</a>
+<a href="about-us.html">ABOUT US</a></div>
+  <div class="grid content">
+  <b>
+<h1>Input Data</h1>
+</b>
+<form name="input">
+<table border="0" bgcolor=violer>
+<tr>
+<td>Nama Lengkap</td><td> : </td>
+<td> <input type="text" name="inama" size="30"/> </td>
+</tr>
+<tr>
+<td>Password</td><td> : </td>
+<td> <input type="password" name="pass" size="30"/> </td>
+</tr>
+<tr>
+<td>Jenis Kelamin</td><td> : </td>
+<td>
+<input type="radio" name="ijekal" value=Laki-Laki/>Laki-Laki
+<input type="radio" name="ijekal" value=Perempuan/>Perempuan</td>
+</tr>
+<tr>
+<td>Alamat</td><td> : </td>
+<td> <textarea name="ialamat" cols="25" rows="5"/></textarea></td>
+</tr>
+<tr>
+<td>sudah bayar?</td><td> : </td>
+<td>
+<select name="ibayar">
+<option>--pilih--</option>
+<option value="lunas">bayar</option>
+</td>
+</tr>
+<tr>
+<td colspan="3" align="right">
+<input type="button" value="Simpan" onClick="sukma();"/>
+<input type="reset" value="Batal"/>
+</td>
+</table>
+</form>
+<b>
+<h1>Output </h1>
+</b>
+<form name="output">
+<table border="0">
+<tr>
+<td>Nama lengkap</td><td> : </td>
+<td><input type="text" name="onama" size="30"/> </td>
+</tr>
+<tr>
+<td>password </td><td> : </td>
+<td><input type="text" name="password" size="30"/> </td>
+</tr>
+<tr>
+<td>Jenis Kelamin </td><td> : </td>
+<td><input type="text" name="ojekal" size="30"/> </td>
+</tr>
+<td>Alamat </td><td> : </td>
+<td><textarea name="oalamat" cols="25" rows="5"/></textarea></td>
+</tr>
+<tr>
+<td>terbayar </td><td> : </td>
+<td><input type="text" name="bayar" size="30"/> </td>
+</tr>
+</table>
+
+</form>
+</div>
+  <div class="grid footer">Footer</div>
+</div>
+</body>
+</html>
